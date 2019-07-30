@@ -68,6 +68,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
+<img src="<?= base_url('dist/img/avatar.jpg') ?>"/>
+
+<hr/>
+
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>
 
@@ -88,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <hr/>
 
-<a href="<?= base_url('mypdf'); ?>">link</a>
+<a href="<?= base_url('index.php/descarga'); ?>">link</a>
 
 <table>
 	<tbody>

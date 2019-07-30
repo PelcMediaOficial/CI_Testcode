@@ -16,9 +16,17 @@ require 'vendor/autoload.php';
 
 // reference the Dompdf namespace
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class Pdf extends DOMPDF
 {
+	public function __construct(){
+		$options = new Options();
+		$options->set('isRemoteEnabled', true);
+		$options->set('compress', true);
+		parent::__construct($options);
+	}
+
 	/**
 	 * Get an instance of CodeIgniter
 	 *
@@ -39,7 +47,7 @@ class Pdf extends DOMPDF
 	 */
 	public function load_view($view, $data = array())
 	{
-		$html = $this->ci()->load->view($view, $data, TRUE);
+		$html = $this->ci()->load->view($view, $data, TRUE);		
 		$this->load_html($html);
 	}
 }

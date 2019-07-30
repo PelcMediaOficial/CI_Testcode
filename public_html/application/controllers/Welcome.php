@@ -28,13 +28,5 @@ class Welcome extends CI_Controller {
 //     *
 //     * @return Response
 //    */
-	function mypdf(){
-
-
-		//$this->load->view('welcome_message');
-		$this->load->library('Pdf');
-		$this->pdf->load_view('welcome_message');
-		$this->pdf->render();
-		$this->pdf->stream("welcome.pdf");
-	}
+	
 }
