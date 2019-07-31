@@ -5,78 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PDF Cotización</title>
+    <title>DOMPDF</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
-        @page { margin: 0px; font-family: sans-serif;}
-        body {
-            margin: 0px;
-            font-family: sans-serif;
-            font-size:12px;
+        /** Define the margins of your page **/
+        @page {
+            margin: 100px 25px;
         }
-       
-        .text-center {
+
+        header {
+            position: fixed;
+            top: -60px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+
+            /** Extra personal styles **/
+            background-color: #03a9f4;
+            color: white;
             text-align: center;
+            line-height: 35px;
         }
 
-        .bg-gray {
-            background-color: silver;
-            color: #333;
-        }
+        footer {
+            position: fixed;
+            bottom: -60px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
 
-        .bg-blue {
-            background-color: #074370;
-            color: #fff;
-        }
-
-        .col{
-            display:inline-block;            
+            /** Extra personal styles **/
+            background-color: #03a9f4;
+            color: white;
+            text-align: center;
+            line-height: 35px;
         }
     </style>
 </head>
 
-<body class="container">
-    <div>
-        <div class="col w-50 bg-gray text-center" style="height:120px;">
-            <img src="<?= base_url('dist/img/logo.jpg')?>" class="logo" /><br/>
-            <a href="#">www.sitioweb.cl</a>
-        </div>
-        <div class="col w-50 bg-blue text-center" style="height:120px;">
-            <p>COTIZACIÓN Nº 58369</p>
-        </div>
-    </div>
-    <div>
-        <div class="col w-50">
-            <div>
-                <p>
-                <h3>Datos del Cliente</h3>
-                <ul>
-                <li>96.753.420-K</li>
-                <li>Arteknia S.A.</li>
-                <li>Av. Apoquindo 6411 Local 40</li>
-                <li>Contacto: Mariana Moller</li>
-                <li>Teléfono: +56223659865</li>
-                <li>Email: mmoller@arteknia.cl</li>
-                </ul>
-                <p>
-            </div>
-        </div>
-        <div class="col w-50">
-            <p>
-                <h3>Detalles de la Cotización</h3>
-                <ul>
-                    <li>Fecha: 12-06-2019</li>
-                    <li>Válida Hasta: 22-06-2019</li>
-                    <li>Vendedor: Erick Palma</li>
-                    <li>Email: epalma@ledstudio.cl / Teléfono: +56223853500</li>
-                    <li>Showroom Santiago Centro - Grajales 2487, Santiago.</li>
-                    <li>Observaciones: Consultas al teléfono 223853518.</li>
-                </ul>
-            <p>
-        </div>
-    </div>
-    <div class="footer">
-    </div>
+<body class="container-fluid">
+
+    <!-- Define header and footer blocks before your content -->
+    <header>
+        Our Code World
+    </header>
+
+    <footer>
+        Copyright &copy; <?php echo date("Y");?>
+    </footer>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>
+                    <p>
+                        <h3>Datos del Cliente</h3>
+                        <ul>
+                            <li>XX.XXX.XX-K</li>
+                            <li>XXXXXXX S.A.</li>
+                            <li>Av. Apoquindo XXX Local XX</li>
+                            <li>Contacto: XXXXX Moller</li>
+                            <li>Teléfono: +562XXXXXXXX</li>
+                            <li>Email: mmoller@XXXX.cl</li>
+                        </ul>
+                        <p>
+                </td>
+                <td>
+                    <p>
+                        <h3>Detalles de la Cotización</h3>
+                        <ul>
+                            <li>Fecha: 12-06-2019</li>
+                            <li>Válida Hasta: 22-06-2019</li>
+                            <li>Vendedor: XXXXX Palma</li>
+                            <li>Email: xpalma@XXXX.cl / Teléfono: +562XXXXXXXX</li>
+                            <li>Santiago Centro - Grajales XXXX, Santiago.</li>
+                            <li>Observaciones: Consultas al teléfono 2XXXXXXX.</li>
+                        </ul>
+                        <p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table class="table">
+        <caption>List of users</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php for ($i=1; $i < 20; $i++) : ?>
+            <tr>
+                <th scope="row"><?= $i ?></th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <?php endfor; ?>
+        </tbody>
+    </table>
 </body>
 
 </html>

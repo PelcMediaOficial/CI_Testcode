@@ -4,15 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-
+	<title>Bienvenido a CodeIgniter</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<style type="text/css">
 
 	::selection { background-color: #E13300; color: white; }
 	::-moz-selection { background-color: #E13300; color: white; }
 
 	body {
-		background-color: red;		
+		background-color: #fff;		
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		color: #4F5155;
 	}
@@ -68,23 +71,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<img src="<?= base_url('dist/img/avatar.jpg') ?>"/>
+<p><img class="rounded" src="<?= base_url('dist/img/avatar.jpg') ?>" width="100" /> By PelcMedia</p>
 
-<hr/>
 
+  
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>¡Bienvenido a CodeIgniter!</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<p>CodeIgniter genera dinámicamente la página que está viendo.</p>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
+		<p>Si desea editar esta página, la encontrará en:</p>
 		<code>application/views/welcome_message.php</code>
 
-		<p>The corresponding controller for this page is found at:</p>
+		<p>El controlador correspondiente para esta página se encuentra en:</p>
 		<code>application/controllers/Welcome.php</code>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+		<p>Si está explorando CodeIgniter por primera vez , debe comenzar leyendo la <a href="https://www.codeigniter.com/user_guide/">Guía del usuario</a>.</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
@@ -92,23 +95,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <hr/>
 
-<a href="<?= base_url('index.php/descarga'); ?>">link</a>
+<ul>
+	<li><strong>Herramientas Creadas</strong></li>
+	<li><a href="<?= base_url('descarga'); ?>" target="_blank">Probar Vista Previa de un PDF - DOMPDF</a></li>	
+	<li><a href="<?= base_url('tareas'); ?>" target="_blank">Listar Task - Modelo-controlador-vista</a></li>	
+</ul>
 
-<table>
-	<tbody>
-	<?php if (isset($tasks)) : ?>
-		<?php foreach ($tasks as $index => $row) : ?>
-		<tr>
-			<td><?= $row->id_task ?></td>
-			<td><?= $row->title ?></td>
-			<td><?= $row->description ?></td>
-			<td><?= $row->priority ?></td>
-			<td><?= $row->author ?></td>
-		</tr>
-		<?php endforeach; ?>	
-<?php endif;?>	
-	</tbody>
-</table>
+
 
 
 </body>
