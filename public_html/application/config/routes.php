@@ -5,6 +5,7 @@ $route['default_controller'] = 'welcome';
 
 $route['descarga'] = "PdfController";
 $route['tareas'] = "TaskController";
+$route['foo'] = "FooController";
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

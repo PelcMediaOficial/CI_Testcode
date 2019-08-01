@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	::-moz-selection { background-color: #E13300; color: white; }
 
 	body {
-		background-color: #fff;		
+		background-color: #fff;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		color: #4F5155;
 	}
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <p><img class="rounded" src="<?= base_url('dist/img/avatar.jpg') ?>" width="100" /> By PelcMedia</p>
 
 
-  
+
 <div id="container">
 	<h1>¡Bienvenido a CodeIgniter!</h1>
 
@@ -82,10 +82,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p>CodeIgniter genera dinámicamente la página que está viendo.</p>
 
 		<p>Si desea editar esta página, la encontrará en:</p>
-		<code>application/views/welcome_message.php</code>
+		<code>application/views/foo-bar.php</code>
 
 		<p>El controlador correspondiente para esta página se encuentra en:</p>
-		<code>application/controllers/Welcome.php</code>
+		<code>application/controllers/FooController.php</code>
+
+        <p>Texto traido desde método entregarTexto desde la clase Foo:</p>
+		<code><?php echo $mensaje;?></code>
 
 		<p>Si está explorando CodeIgniter por primera vez , debe comenzar leyendo la <a href="https://www.codeigniter.com/user_guide/">Guía del usuario</a>.</p>
 	</div>
@@ -97,9 +100,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <ul>
 	<li><strong>Herramientas Creadas</strong></li>
-	<li><a href="<?= base_url('descarga'); ?>" target="_blank">Probar Vista Previa de un PDF - DOMPDF</a></li>	
+	<li><a href="<?= base_url('descarga'); ?>" target="_blank">Probar Vista Previa de un PDF - DOMPDF</a></li>
 	<li><a href="<?= base_url('tareas'); ?>" target="_blank">Listar Task - Modelo-controlador-vista</a></li>
-    <li><a href="<?= base_url('foo/bar'); ?>" target="_blank">Mostrar texto - Modelo-controlador-vista</a></li>	
 </ul>
 
 
